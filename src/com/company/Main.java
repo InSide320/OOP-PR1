@@ -1,24 +1,35 @@
 package com.company;
 
 import com.company.Example1.MyTimerTask;
+import com.company.Example2.DrawFig;
+
+import javax.swing.*;
+
 import java.util.Timer;
 
 public class Main {
     public static void main(String[] args) {
+            /*
+                MyTimerTask myTimerTask = new MyTimerTask();
+                Timer myTimer = new Timer();
 
-            MyTimerTask myTimerTask = new MyTimerTask();
-            Timer myTimer = new Timer();
-
-                //Встановлює початкову паузу протягом 1 секунди,
-                //а потім повторює завдання кожні пів секунди
-            myTimer.schedule(myTimerTask,1000,500);
-            try{
-                Thread.sleep(5000);
-            }catch (InterruptedException exc){
-                System.out.println(exc.getMessage());
-            }
-            myTimer.cancel();
-
-
+                    //Встановлює початкову паузу протягом 1 секунди,
+                    //а потім повторює завдання кожні пів секунди
+                myTimer.schedule(myTimerTask,1000,500);
+                try{
+                    Thread.sleep(5000);
+                }catch (InterruptedException exc){
+                    System.out.println(exc.getMessage());
+                }
+                myTimer.cancel();
+             */
+        JFrame frame = new JFrame("Приклад");
+        DrawFig appl = new DrawFig();
+        appl.init();
+        appl.start();
+        frame.getContentPane().add(appl);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400,400);
+        frame.setVisible(true);
     }
 }
