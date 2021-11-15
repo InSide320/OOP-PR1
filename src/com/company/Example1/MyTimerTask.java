@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Example1;
 
 import java.util.TimerTask;
 
