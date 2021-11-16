@@ -25,6 +25,7 @@ public class GUIForm extends JFrame {
         drawFigure.init();
         drawFigure.start();
 
+// Відображення фігури
 //        getContentPane().add(drawFigure);
 
         setVisible(true);
