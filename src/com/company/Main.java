@@ -1,14 +1,13 @@
 package com.company;
 
-import com.company.Example1.MyTimerTask;
-import com.company.Example2.DrawFig;
+import com.company.variant1.DrawFigure;
+import com.company.variant1.GUIForm;
 
 import javax.swing.*;
 
-import java.util.Timer;
-
 public class Main {
     public static void main(String[] args) {
+        //Example#1
             /*
                 MyTimerTask myTimerTask = new MyTimerTask();
                 Timer myTimer = new Timer();
@@ -23,13 +22,28 @@ public class Main {
                 }
                 myTimer.cancel();
              */
-        JFrame frame = new JFrame("Приклад");
-        DrawFig appl = new DrawFig();
-        appl.init();
-        appl.start();
-        frame.getContentPane().add(appl);
+
+        //Example#2
+        /*
+            JFrame frame = new JFrame("Приклад");
+            DrawFig appl = new DrawFig();
+            appl.init();
+            appl.start();
+            frame.getContentPane().add(appl);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(400,400);
+            frame.setVisible(true);
+         */
+
+        //Example 3
+        /*
+
+         */
+        GUIForm guiForm = new GUIForm();
+        JFrame frame = new JFrame("Figure");
+        DrawFigure drawFigure = new DrawFigure();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
-        frame.setVisible(true);
+        frame.getContentPane().add(drawFigure);
     }
 }

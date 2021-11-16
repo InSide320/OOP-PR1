@@ -10,10 +10,10 @@ public class DrawFig extends JApplet {
     @Override
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        GradientPaint gradientPaint = new GradientPaint(0,0, Color.red,175,175,Color.yellow,true);
+        GradientPaint gradientPaint = new GradientPaint(0,0, Color.red,100,100,Color.yellow,true);
         g2d.setPaint(gradientPaint);
         //Координати эліпсу
-        Ellipse2D.Double circle = new Ellipse2D.Double(10,10,350,350);
+        Ellipse2D.Double circle = new Ellipse2D.Double(5,5,150,150);
         g2d.fill(circle);//Заповнити коліром
         g2d.setPaint(Color.red);//Колір окружності
         g2d.draw(circle);
